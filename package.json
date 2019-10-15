@@ -1,0 +1,29 @@
+{
+    "name": "insertProjectName",
+    "version": "0.0.1",
+    "description": "A brief project description",
+    "keywords": ["array", "of", "strings"],
+    "author": "Nick Garcia <me@nickgarcia.me> (https://nickgarcia.me)",
+    "homepage": "https://nickgarcia.me",
+    "main": "index.js",
+    "license": "ISC",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nicksideaengine/package.git"
+    },
+    "bugs": {
+        "url": "https://nickgarcia.me/bugs",
+        "email": "me@nickgarcia.me"
+    },
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "eslint": "^6.5.1",
+        "jquery": "^3.4.1",
+        "popper.js": "^1.15.0"
+    },
+    "devDependencies": {}
+}
