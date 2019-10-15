@@ -1,5 +1,5 @@
 # Examples directory for referencing other projects
-examples/
+examples
 
 # Dependency directories
 node_modules
