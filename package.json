@@ -2,7 +2,11 @@
     "name": "starter-kit",
     "version": "0.0.1",
     "description": "A brief project description",
-    "keywords": ["array", "of", "strings"],
+    "keywords": [
+        "array",
+        "of",
+        "strings"
+    ],
     "author": "Nick Garcia <me@nickgarcia.me> (https://nickgarcia.me)",
     "homepage": "https://nickgarcia.me",
     "main": "index.js",
@@ -21,9 +25,13 @@
     },
     "dependencies": {
         "bootstrap": "^4.3.1",
-        "eslint": "^6.5.1",
         "jquery": "^3.4.1",
         "popper.js": "^1.15.0"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "eslint": "^6.5.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-watch": "^6.0.1",
+        "open": "^7.0.0"
+    }
 }
