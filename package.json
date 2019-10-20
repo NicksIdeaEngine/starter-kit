@@ -17,8 +17,10 @@
     "private": true,
     "scripts": {
         "prestart": "babel-node buildScripts/startMessage.js",
-        "start": "npm-run-all --parallel open:src",
+        "start": "npm-run-all --parallel open:src lint:watch",
         "open:src": "babel-node buildScripts/srcServer.js",
+        "lint": "esw webpack.config.* buildScripts js --color",
+        "lint:watch": "npm run lint -- --watch",
         "localtunnel": "lt --port 8080",
         "share": "npm-run-all --parallel open:src localtunnel"
     },
