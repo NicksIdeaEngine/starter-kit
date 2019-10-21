@@ -3,31 +3,34 @@ import webpack from 'webpack';
 
 export default {
     devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    },
     mode: 'development',
-    entry: [
-        path.resolve(__dirname, 'js/index')
-    ],
+    entry: './src/index.js',
     target: 'web',
     output: {
-        path: path.resolve(__dirname, 'js'),
+        path: path.resolve(__dirname, '/dist'),
         publicPath: '/',
-        filename: 'js/bundle.js'
+        filename: 'bundle.js'
     },
     plugins: [
         new webpack.LoaderOptionsPlugin({
             noInfo: false,
             debug: true
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
+    resolve: {
+        extensions: ['*', '.js', '.jsx']
+    },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /(node_modules|examples)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: { presets: ['@babel/preset-env'] }
-                }
+                use: ['babel-loader', 'eslint-loader']
             },
             {
                 test: /\.css$/,
