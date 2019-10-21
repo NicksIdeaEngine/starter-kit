@@ -1,34 +1,22 @@
 import path from 'path';
-import webpack from 'webpack';
 
 export default {
   devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist',
-    hot: true,
-  },
+  entry: [
+    path.resolve(__dirname, 'src/index')
+  ],
   mode: 'development',
-  entry: './src/index.jsx',
-  target: 'web',
   output: {
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js',
   },
-  plugins: [
-    new webpack.LoaderOptionsPlugin({
-      noInfo: false,
-      debug: true,
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
-  resolve: {
-    extensions: ['*', '.js', '.jsx'],
-  },
+  plugins: [],
+  target: 'web',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /(node_modules|examples)/,
         use: ['babel-loader', 'eslint-loader'],
       },
