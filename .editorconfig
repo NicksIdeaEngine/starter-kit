@@ -1,6 +1,6 @@
 # indicates this as top-most EditorConfig file
 root = true
 
-[{*,.eslintrc.json,*.{js,jsx}}]
+[*]
 charset = utf-8
 end_of_line = lf
