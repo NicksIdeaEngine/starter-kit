@@ -16,7 +16,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.js$/,
         exclude: /(node_modules|examples)/,
         use: ['babel-loader', 'eslint-loader'],
       },
