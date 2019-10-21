@@ -19,7 +19,7 @@
         "prestart": "babel-node buildScripts/startMessage.js",
         "start": "npm-run-all --parallel open:src lint:watch",
         "open:src": "babel-node buildScripts/srcServer.js",
-        "lint": "esw webpack.config.* buildScripts js --color",
+        "lint": "esw webpack.config.* buildScripts --color",
         "lint:watch": "npm run lint -- --watch",
         "localtunnel": "lt --port 8080",
         "share": "npm-run-all --parallel open:src localtunnel"
@@ -34,10 +34,15 @@
     },
     "dependencies": {
         "bootstrap": "^4.3.1",
+        "chalk": "^2.4.2",
+        "express": "^4.17.1",
         "jquery": "^3.4.1",
+        "open": "^7.0.0",
         "popper.js": "^1.15.0",
         "react": "^16.10.2",
-        "react-dom": "^16.10.2"
+        "react-dom": "^16.10.2",
+        "webpack": "^4.41.2",
+        "webpack-dev-middleware": "^3.7.2"
     },
     "devDependencies": {
         "@babel/cli": "^7.6.4",
@@ -48,7 +53,6 @@
         "babel-eslint": "^10.0.3",
         "babel-loader": "^8.0.6",
         "browser-sync": "^2.26.7",
-        "chalk": "^2.4.2",
         "css-loader": "^3.2.0",
         "eslint": "^6.5.1",
         "eslint-config-airbnb": "^18.0.1",
@@ -58,13 +62,9 @@
         "eslint-plugin-react": "^7.16.0",
         "eslint-plugin-react-hooks": "^1.7.0",
         "eslint-watch": "^6.0.1",
-        "express": "^4.17.1",
         "localtunnel": "^2.0.0",
         "npm-run-all": "^4.1.5",
-        "open": "^7.0.0",
         "react-hot-loader": "^4.12.15",
-        "style-loader": "^1.0.0",
-        "webpack": "^4.41.2",
-        "webpack-dev-middleware": "^3.7.2"
+        "style-loader": "^1.0.0"
     }
 }
