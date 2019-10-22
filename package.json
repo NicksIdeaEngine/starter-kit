@@ -24,7 +24,8 @@
         "localtunnel": "lt --port 8080",
         "share": "npm-run-all --parallel open:src localtunnel",
         "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
-        "test:watch": "npm run test -- --watch"
+        "test:watch": "npm run test -- --watch",
+        "webpack": "webpack"
     },
     "repository": {
         "type": "git",
