@@ -7,7 +7,7 @@ export default {
   ],
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'src'),
     publicPath: '/',
     filename: 'bundle.js',
   },
@@ -18,10 +18,21 @@ export default {
       {
         test: /\.js$/,
         exclude: /(node_modules|examples)/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+          {
+            loader: 'eslint-loader',
+          }
+        ],
       },
       {
         test: /\.css$/,
+        exclude: /(node_modules|examples)/,
         use: ['style-loader', 'css-loader'],
       },
     ],

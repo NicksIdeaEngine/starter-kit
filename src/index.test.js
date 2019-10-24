@@ -11,13 +11,13 @@ describe('Our first test', () => {
 });
 
 describe('index.html', () => {
-  it('should say hello', () => {
-    const index = fs.readFileSync('./dist/index.html', "utf-8");
+  it('should have h1 that says Users', () => {
+    const index = fs.readFileSync('./src/index.html', "utf-8");
     const { window } = new JSDOM(index, {
       runScripts: "outside-only"
     });
     const h1 = window.document.getElementsByTagName('h1')[0];
-    expect(h1.innerHTML).to.equal("Hello world!?");
+    expect(h1.innerHTML).to.equal("Users");
     window.close();
   });
 });
