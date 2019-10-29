@@ -33,6 +33,7 @@ export default {
           },
           {
             loader: 'eslint-loader',
+          }
         ],
       },
       {

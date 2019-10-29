@@ -44,6 +44,10 @@
         "email": "me@nickgarcia.me"
     },
     "dependencies": {
+        "@sentry/browser": "^5.7.1",
+        "@sentry/cli": "^1.48.0",
+        "@sentry/core": "^5.7.1",
+        "@sentry/node": "^5.7.1",
         "bootstrap": "^4.3.1",
         "express": "^4.17.1",
         "jquery": "^3.4.1",
@@ -59,6 +63,7 @@
         "@babel/node": "^7.6.3",
         "@babel/preset-env": "^7.6.3",
         "@babel/register": "^7.6.2",
+        "@sentry/webpack-plugin": "^1.9.1",
         "babel-eslint": "^10.0.3",
         "babel-loader": "^8.0.6",
         "chai": "^4.2.0",
@@ -75,9 +80,11 @@
         "json-schema-faker": "^0.5.0-rc22",
         "json-server": "^0.15.1",
         "localtunnel": "^2.0.0",
+        "mini-css-extract-plugin": "^0.8.0",
         "mocha": "^6.2.2",
         "npm-run-all": "^4.1.5",
         "rimraf": "^3.0.0",
-        "style-loader": "^1.0.0"
+        "style-loader": "^1.0.0",
+        "webpack-md5-hash": "0.0.6"
     }
 }
